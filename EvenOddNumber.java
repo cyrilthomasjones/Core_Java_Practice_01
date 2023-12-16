@@ -1,53 +1,26 @@
-package udemy_logical_programming_practise;
+package programming_practice;
 
 import java.util.Scanner;
 
 public class EvenOddNumber {
 
 	public static void main(String[] args) {
-		System.out.println("Enter a number:");
-      try(Scanner sc = new Scanner(System.in);){
-      int num = sc.nextInt();
-      if(num <= 0){
-//    	  System.out.println("Invalid number "+ num);
-    	  throw new IllegalArgumentException("Invalid number "+ num);
-    	  
-      }else{
-    	  if(num % 2 == 2){
-    		  System.out.println("Even");
-    		  
-    	  }else{
-    		  System.out.println("Odd");
-    	  }
-      }
-	}
-   }
-	
-/*	public static void main(String[] args) {
-		System.out.println("Enter a number:");
-		// Note to read on try with resource block
-		Scanner scanner = null;
-		try {
-			scanner = new Scanner(System.in);
-			int num = scanner.nextInt();
-			if (num <= 0) {
-				System.out.println("Invalid number " + num);
+		System.out.println("Enter a number");
+		try (Scanner scanner = new Scanner(System.in);) {
+			int userInput = scanner.nextInt();
 
+			if (userInput <= 0) {
+             // System.out.println("Invalid Number Inputted");
+				throw new IllegalArgumentException("Invalid number " + userInput);
 			} else {
-				// Main Logic
-				if (num % 2 == 0) {
-					System.out.println("Even");
+				if (userInput % 2 == 0) {
+					System.out.println("User input an Even number");
 				} else {
-					System.out.println("Odd");
+					System.out.println("User input an odd number");
 				}
-
 			}
-		} catch (IllegalArgumentException e) {
-			System.out.println();
-
-		} finally {
-			scanner.close();
 		}
-		}
-		*/
+		// Close scanner with close method or try-with resource block
+		// scanner.close();
+	}
 }

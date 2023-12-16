@@ -2,24 +2,29 @@ package programming_practice;
 
 import java.util.Scanner;
 
-public class DigitExtractor {
+public class DuckNumberChecker {
 
 	public static void main(String[] args) {
-
 		System.out.println("Enter a number");
 		Scanner sc = new Scanner(System.in);
-		// Note num is initialized but digit is not initialized
 		int digit, num = sc.nextInt();
-
-		while (num != 0) {
+		boolean isDuckNumber = false;
+		
+		while(num!=0){
 			digit = num % 10;
-			System.out.print(digit + " ");
+			if(digit == 0){
+				isDuckNumber = true; 
+				break;
+			}
 			num = num / 10;
 		}
+		if(isDuckNumber){
+			System.out.println("Number is a duck number");
+		}else{
+			System.out.println("Not a duck number");
+		}
+		
 		sc.close();
-
-		// Note to try test printing the number in reverse.
-
 	}
 
 }
