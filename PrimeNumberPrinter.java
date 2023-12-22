@@ -31,7 +31,7 @@ public class PrimeNumberPrinter {
 				}
 			}
 		}
-
+		sc.close();
 	}
 
 }
