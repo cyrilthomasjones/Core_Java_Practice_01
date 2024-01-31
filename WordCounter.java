@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class WordCounter {
 
 	public static void main(String[] args) {
-		System.out.println("Enter a String");//Use nextLine() instead of next() to consider anything after first space character
+		System.out.println("Enter a String");
 		Scanner sc = new Scanner(System.in);
-		String input = sc.nextLine();
+		String input = sc.nextLine();//Use nextLine() instead of next() to consider anything after first space character
 		int count = 0; 
 		
 		for (int i = 0; i < input.length(); i++) {
