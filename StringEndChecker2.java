@@ -11,7 +11,7 @@ public class StringEndChecker2 {
 		System.out.println("Enter Second String");
 		String s2 = sc.nextLine();
 		
-		System.out.println(s1.endsWith(s2)? "YES" : "NO");
+		System.out.println(s1.endsWith(s2)? "YES" : "NO"); // Note: here we use the inbuilt string method
 
 		sc.close();
 	}
