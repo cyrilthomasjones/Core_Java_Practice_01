@@ -1,29 +1,30 @@
-package programming_practice;
+package strings;
 
 import java.util.Scanner;
 
 public class StringEndChecker {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter First String");
-		String s1 = sc.nextLine();//Use nextLine() instead of next() to consider anything after first space character
+		String s1 = scanner.nextLine();
 		System.out.println("Enter Second String");
-		String s2 = sc.nextLine();
-		
+		String s2 = scanner.nextLine();
 		int count = 0;
-		for (int i = s1.length()-1, j=s2.length()-1; j >= 0; i--,j--) {
-			if(s1.charAt(i) == s2.charAt(j)){
+
+		for (int i = s1.length() - 1, j = s2.length() - 1; j >=0; i--, j--) {
+			if (s1.charAt(i) == s2.charAt(j)) {
 				count++;
 			}
 		}
-		
-		if(count == s2.length()){
+
+		if (count == s2.length()) {
 			System.out.println("Yes");
-		}else{
+		} else {
 			System.out.println("No");
 		}
-		sc.close();
+		scanner.close();
 	}
 
 }
